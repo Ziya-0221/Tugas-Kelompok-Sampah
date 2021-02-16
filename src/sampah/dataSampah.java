@@ -1,31 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sampah;
+
 import java.util.Scanner;
-/**
- *
- * @author indi
- */
+
 public class dataSampah {
     
-    
+    //object input
     Scanner input = new Scanner (System.in);
     int totalPrice = 0;
-    
-    //void method -> user menginputkan data
-    void data(){
-        System.out.println("|          MASUKKAN IDENTITAS ANDA          |");
-        System.out.print("Masukkan Nama : ");
-        String nama = input.next();
-        System.out.print("Masukkan Alamat : ");
-        String alamat = input.next();
-        System.out.print("Masukkan No. HP : ");
-        String hp = input.next();
-        System.out.println("");
-    }
     
     //void method -> user menentukan pilihan
     void pilihan(){
@@ -82,30 +64,19 @@ public class dataSampah {
         repeat = keepRepeating.equalsIgnoreCase("y");
         System.out.println("=========================");
         }
-        
+        System.out.println("Total uang yang anda dapatkan: "+totalPrice);
         }
     
-    //pembayaran
-    void akhir(){
-        System.out.println("Pembayaran: "+totalPrice);
-        
-        boolean bayar = true;
-        
-            System.out.print("Masukkan uang anda: ");
-            int uang  = input.nextInt();
-            
-            if(uang < totalPrice){
-                    int kurang = totalPrice - uang;
-                    System.out.println("Uang anda kurang "+kurang+" ,Mohon masukkan uang anda lagi");
-                    System.out.print("=> ");
-                    int uangg = input.nextInt();
-                    
-            }else if(uang > totalPrice){
-                int kembalian = uang - totalPrice;
-                System.out.println("Uang kembalian anda "+kembalian);
-            }else{
-                System.out.println("Uang anda Pas");
-            }
+    //void method ->user input alamat dan tanggal 
+    void jemput(){
+        System.out.print("Masukkan Alamat penjemputan: ");
+        String alamat = input.next();
+        System.out.print("Masukkan waktu dan tanggal penjemputan: ");
+        String waktu = input.next();
+        System.out.println("Terimakasih");
+        System.out.println("Transaksi telah berhasil");
+    }
+    
         
     }
-}
+

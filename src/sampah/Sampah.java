@@ -1,28 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package sampah;
-
-/**
- *
- * @author indi
- */
+import java.util.Scanner;
 public class Sampah {
+    
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        
+        Scanner input = new Scanner(System.in);
+        
+        //objek
         dataSampah oi = new dataSampah();
         
-        oi.data();
-        oi.pilihan();
-        oi.akhir();
+        //user memasukkan nama
+        System.out.println("****Selamat datang di Trash Mall***");
+        System.out.print("Masukkan nama: ");
+        String nama = input.nextLine();
         
-        System.out.println("Terimakasih");
-        System.out.println("Silahkan datang kembali");
+        //pemanggilan method 
+        oi.pilihan();
+        oi.jemput();
+        
     }
     
 }
